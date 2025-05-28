@@ -1,0 +1,4641 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STC Investment Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .slide {
+            width: 100%;
+            min-height: 720px;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+        }
+
+        .slide-one .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-one .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-one .slide-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            z-index: 10;
+            position: relative;
+            padding: 200px 100px;
+        }
+
+        .slide-one .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-one .logo {
+            width: 120px;
+            height: auto;
+        }
+
+        .slide-one .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-one .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+        }
+
+        .slide-one .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-one .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-one .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .slide-one .title-animation {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .slide-one .subtitle-animation {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
+        }
+
+        .slide-one .highlight-box {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ################################ */
+
+
+
+        .slide-two .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-two .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-two .stc-light-blue {
+            color: #4d94db;
+        }
+
+        .slide-two .stc-bg-light-blue {
+            background-color: #4d94db;
+        }
+
+        .slide-two .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slide-two .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-two .logo {
+            width: 120px;
+            height: auto;
+        }
+
+        .slide-two .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-two .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slide-two .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-two .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-two .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .slide-two .stat-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .slide-two .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-two .chart-container {
+            height: 220px;
+            width: 100%;
+        }
+
+        .slide-two .conclusion-box {
+            background-color: #4d5b72;
+            border-radius: 12px;
+            padding: 20px;
+            color: white;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.5s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        /* slide three */
+
+
+
+        .slide-three .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-three .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-three .stc-light-blue {
+            color: #4d94db;
+        }
+
+        .slide-three .stc-bg-light-blue {
+            background-color: #4d94db;
+        }
+
+        .slide-three .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slide-three .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-three .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-three .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slide-three .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-three .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-three .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .slide-three .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .slide-three.comparison-table th,
+        .slide-three .comparison-table td {
+            padding: 16px;
+            text-align: center;
+        }
+
+        .slide-three .comparison-table thead th {
+            background-color: #4d5b72;
+            color: white;
+            font-weight: bold;
+        }
+
+        .slide-three .comparison-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .slide-three .comparison-table tbody tr:hover {
+            background-color: #e9f0f8;
+        }
+
+        .slide-three .chart-container {
+            height: 240px;
+            width: 100%;
+        }
+
+        .slide-three .highlight-card {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .slide-three .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-three .highlight-card-blue {
+            border-top: 5px solid #4d5b72;
+        }
+
+        .slide-three .highlight-card-green {
+            border-top: 5px solid #22c55e;
+        }
+
+        .slide-three .highlight-card-orange {
+            border-top: 5px solid #f59e0b;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* slide four */
+
+
+
+        .slide-four .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-four .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-four .stc-light-blue {
+            color: #4d94db;
+        }
+
+        .slide-four .stc-bg-light-blue {
+            background-color: #4d94db;
+        }
+
+        .slide-four .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slide-four .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-four .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-four .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slide-four .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-four .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-four .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .slide-four .transformation-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .slide-four .transformation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-four .card-number {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 40px;
+            height: 40px;
+            background-color: #4d5b72;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .slide-four .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+        }
+
+        .slide-four .icon-wrapper-1 {
+            background-color: rgba(0, 102, 204, 0.1);
+            color: #4d5b72;
+        }
+
+        .slide-four .icon-wrapper-2 {
+            background-color: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+        }
+
+        .slide-four .icon-wrapper-3 {
+            background-color: rgba(245, 158, 11, 0.1);
+            color: #f59e0b;
+        }
+
+        .slide-four .icon-wrapper-4 {
+            background-color: rgba(139, 92, 246, 0.1);
+            color: #8b5cf6;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .arrow-connector {
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #4d5b72;
+            z-index: 20;
+        }
+
+        /* slide five */
+
+
+
+        .slide-five .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-five .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-five .stc-light-blue {
+            color: #4d94db;
+        }
+
+        .slide-five .stc-bg-light-blue {
+            background-color: #4d94db;
+        }
+
+        .slide-five .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slide-five .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-five .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-five .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slide-five .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-five .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-five .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .slide-five .risk-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .slide-five .risk-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-five .risk-level {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .slide-five .risk-high {
+            background-color: #ef4444;
+        }
+
+        .slide-five .risk-medium {
+            background-color: #f59e0b;
+        }
+
+        .slide-five .risk-low-medium {
+            background-color: #84cc16;
+        }
+
+        .slide-five .risk-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .slide-five .risk-item {
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .slide-five .risk-item:hover {
+            background-color: #f3f4f6;
+        }
+
+        .slide-five .probability-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .slide-five .prob-high {
+            background-color: #ef4444;
+        }
+
+        .slide-five .prob-medium {
+            background-color: #f59e0b;
+        }
+
+        .slide-five .prob-low {
+            background-color: #22c55e;
+        }
+
+        /* slide six */
+
+
+
+        .slide-six .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-six .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-six .stc-light-blue {
+            color: #4d94db;
+        }
+
+        .slide-six .stc-bg-light-blue {
+            background-color: #4d94db;
+        }
+
+        .slide-six .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slide-six .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-six .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-six .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slide-six .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-six .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-six .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .slide-six .value-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .slide-six .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-six .metric-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            transition: all 0.3s ease;
+        }
+
+        .slide-six .metric-circle:hover {
+            transform: scale(1.1);
+        }
+
+        .slide-six .bull-card {
+            border-top: 4px solid #22c55e;
+        }
+
+        .slide-six .base-card {
+            border-top: 4px solid #3b82f6;
+        }
+
+        .slide-six .bear-card {
+            border-top: 4px solid #ef4444;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .slide-six .chart-container {
+            height: 250px;
+            width: 100%;
+            position: relative;
+        }
+
+        .slide-six .price-tag {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #4d5b72;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* slide seven */
+
+
+
+        .slide-seven .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-seven .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-seven .stc-light-blue {
+            color: #4d94db;
+        }
+
+        .slide-seven .stc-bg-light-blue {
+            background-color: #4d94db;
+        }
+
+        .slide-seven .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slide-seven .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-seven .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-seven .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slide-seven .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-seven .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-seven .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .slide-seven .comparison-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .slide-seven .comparison-table th {
+            background-color: #4d5b72;
+            color: white;
+            font-weight: bold;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .slide-seven .comparison-table td {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .slide-seven .comparison-table tr:nth-child(even) td {
+            background-color: #f0f8ff;
+        }
+
+        .slide-seven .comparison-table tr:hover td {
+            background-color: #e6f2ff;
+        }
+
+        .slide-seven .stc-row td {
+            background-color: rgba(0, 102, 204, 0.1) !important;
+            font-weight: bold;
+        }
+
+        .slide-seven .stc-row:hover td {
+            background-color: rgba(0, 102, 204, 0.2) !important;
+        }
+
+        .slide-seven .company-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .slide-seven .advantage-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .slide-seven .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-seven .advantage-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .slide-seven .highlight-badge {
+            display: inline-block;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: white;
+            margin-top: 8px;
+        }
+
+        /* slide-eight */
+
+
+
+
+        .slide-eight .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-eight .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-eight .stc-light-blue {
+            color: #4d94db;
+        }
+
+        .slide-eight .stc-bg-light-blue {
+            background-color: #4d94db;
+        }
+
+        .slide-eight .slide-eight .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slide-eight .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-eight .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-eight .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slide-eight .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-eight .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-eight .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .slide-eight .catalyst-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide-eight .catalyst-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-eight .catalyst-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-color-light));
+        }
+
+        .slide-eight .card-1 {
+            --accent-color: #3b82f6;
+            --accent-color-light: #93c5fd;
+        }
+
+        .slide-eight .card-2 {
+            --accent-color: #22c55e;
+            --accent-color-light: #86efac;
+        }
+
+        .slide-eight .card-3 {
+            --accent-color: #f59e0b;
+            --accent-color-light: #fcd34d;
+        }
+
+        .slide-eight .card-4 {
+            --accent-color: #8b5cf6;
+            --accent-color-light: #c4b5fd;
+        }
+
+        .slide-eight .catalyst-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: white;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-eight .catalyst-icon::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            bottom: -5px;
+            left: -5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .slide-eight .catalyst-card:hover .catalyst-icon::after {
+            opacity: 1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .slide-eight .stat-highlight {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: block;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .slide-eight .pulse-dot {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            right: -18px;
+            bottom: 5px;
+        }
+
+        .slide-eight .pulse-dot::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.5);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* slide nine */
+
+
+
+        .slide-nine .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-nine .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-nine .stc-light-blue {
+            color: #4d94db;
+        }
+
+        .slide-nine .stc-bg-light-blue {
+            background-color: #4d94db;
+        }
+
+        .slide-nine .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slide-nine .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-nine .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-nine .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slide-nine .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-nine .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-nine .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .slide-nine .risk-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-right: 5px solid;
+        }
+
+        .slide-nine .risk-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-nine .risk-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: white;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-nine .risk-label {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .slide-nine .risk-meter {
+            height: 6px;
+            width: 100%;
+            background-color: #e5e7eb;
+            border-radius: 3px;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .slide-nine .risk-fill {
+            height: 100%;
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        /* slide ten */
+
+
+
+        .slide-ten .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-ten .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-ten .stc-light-blue {
+            color: #4d94db;
+        }
+
+        .slide-ten .stc-bg-light-blue {
+            background-color: #4d94db;
+        }
+
+        .slide-ten .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slide-ten .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-ten .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-ten .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slide-ten .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-ten .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-ten .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .slide-ten .lesson-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide-ten .lesson-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-ten .lesson-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 5px;
+            background: var(--accent-color);
+        }
+
+        .slide-ten .lesson-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: white;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-color-light));
+        }
+
+        .slide-ten .lesson-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .slide-ten .lesson-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .slide-ten .lesson-card:hover .lesson-title::after {
+            width: 100%;
+        }
+
+        .slide-ten .lesson-highlight {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+
+        .slide-ten .lesson-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: white;
+            background-color: var(--accent-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+        .slide-ten .card-1 {
+            --accent-color: #3b82f6;
+            --accent-color-light: #93c5fd;
+        }
+
+        .slide-ten .card-2 {
+            --accent-color: #10b981;
+            --accent-color-light: #6ee7b7;
+        }
+
+        .slide-ten .card-3 {
+            --accent-color: #f59e0b;
+            --accent-color-light: #fcd34d;
+        }
+
+        .slide-ten .card-4 {
+            --accent-color: #ef4444;
+            --accent-color-light: #fca5a5;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        /* slide eleven */
+
+
+
+        .slide-eleven .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-eleven .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-eleven .stc-light-blue {
+            color: #4d94db;
+        }
+
+        .slide-eleven .stc-bg-light-blue {
+            background-color: #4d94db;
+        }
+
+        .slide-eleven .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slide-eleven .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-eleven .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-eleven .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slide-eleven .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-eleven .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-eleven .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .slide-eleven .timeline {
+            position: relative;
+            padding-top: 20px;
+        }
+
+        .slide-eleven .timeline::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 5px;
+            background: linear-gradient(to bottom, #4d5b72, #10B981, #F59E0B);
+            right: 50%;
+            transform: translateX(50%);
+            border-radius: 20px;
+            z-index: 1;
+        }
+
+        .slide-eleven .timeline-item {
+            display: flex;
+            position: relative;
+            z-index: 2;
+        }
+
+        .slide-eleven .timeline-content {
+            width: 90%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 2;
+        }
+
+        .slide-eleven .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            border-style: solid;
+        }
+
+        .slide-eleven .timeline-left {
+            flex-direction: row;
+            margin-bottom: 30px;
+        }
+
+        .slide-eleven .timeline-left .timeline-content {
+            margin-left: auto;
+        }
+
+        .slide-eleven .timeline-left .timeline-content::after {
+            left: -10px;
+            transform: translateY(-50%) rotate(45deg);
+            border-width: 0 0 2px 2px;
+            border-color: white;
+            background-color: white;
+        }
+
+        .slide-eleven .timeline-right {
+            flex-direction: row-reverse;
+            margin-bottom: 30px;
+        }
+
+        .slide-eleven .timeline-right .timeline-content {
+            margin-right: auto;
+        }
+
+        .slide-eleven .timeline-right .timeline-content::after {
+            right: -10px;
+            transform: translateY(-50%) rotate(45deg);
+            border-width: 2px 2px 0 0;
+            border-color: white;
+            background-color: white;
+        }
+
+        .slide-eleven .timeline-marker {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            border: 5px solid;
+            z-index: 3;
+        }
+
+        .slide-eleven .period-1 {
+            border-color: #4d5b72;
+        }
+
+        .slide-eleven .period-2 {
+            border-color: #10B981;
+        }
+
+        .slide-eleven .period-3 {
+            border-color: #F59E0B;
+        }
+
+        .slide-eleven .scenario-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .slide-eleven .scenario-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-eleven .scenario-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .slide-eleven .scenario-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .slide-eleven .base-scenario {
+            background-color: #4d5b72;
+        }
+
+        .slide-eleven .positive-scenario {
+            background-color: #10B981;
+        }
+
+        .slide-eleven .negative-scenario {
+            background-color: #EF4444;
+        }
+
+        .slide-eleven .period-label {
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            background-color: white;
+            color: var(--period-color);
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--period-color);
+            z-index: 3;
+        }
+
+        .slide-eleven .period-1-label {
+            --period-color: #4d5b72;
+            top: 0;
+        }
+
+        .slide-eleven .period-2-label {
+            --period-color: #10B981;
+            top: 33.3%;
+        }
+
+        .slide-eleven .period-3-label {
+            --period-color: #F59E0B;
+            top: 66.6%;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* slide-twelve */
+
+
+
+        .slide-twelve .stc-blue {
+            color: #4d5b72;
+        }
+
+        .slide-twelve .stc-bg-blue {
+            background-color: #4d5b72;
+        }
+
+        .slide-twelve .stc-light-blue {
+            color: #4d94db;
+        }
+
+        .slide-twelve .stc-bg-light-blue {
+            background-color: #4d94db;
+        }
+
+        .slide-twelve .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slide-twelve .logo-container {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 5;
+        }
+
+        .slide-twelve .vision-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: #4d5b72;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-twelve .decorative-element {
+            position: absolute;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .slide-twelve .decorative-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .slide-twelve .decorative-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: 200px;
+        }
+
+        .slide-twelve .decorative-3 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .slide-twelve .investor-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide-twelve .investor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-twelve .investor-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 5px;
+            background: var(--card-color);
+        }
+
+        .slide-twelve .investor-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            background: var(--card-color);
+        }
+
+        .slide-twelve .income-card {
+            --card-color: #3b82f6;
+        }
+
+        .slide-twelve .growth-card {
+            --card-color: #10b981;
+        }
+
+        .slide-twelve .value-card {
+            --card-color: #f59e0b;
+        }
+
+        .slide-twelve .recommendation-card {
+            background: linear-gradient(135deg, #4d5b72 0%, #003366 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 50px 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide-twelve .recommendation-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #f59e0b;
+            color: white;
+            padding: 20px;
+            border-radius: 0 0 0 50px;
+            font-weight: bold;
+            transform: rotate(45deg);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-twelve .recommendation-stat {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 50px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .slide-twelve .recommendation-stat i {
+            margin-left: 8px;
+        }
+
+        .slide-twelve .final-verdict {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .slide-twelve .verdict-quote {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.05);
+            font-size: 6rem;
+            top: -20px;
+            right: 10px;
+        }
+
+        .slide-twelve .pros-cons-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .slide-twelve .pros-cons-item i {
+            margin-left: 8px;
+            flex-shrink: 0;
+        }
+
+        .slide-twelve .verdict-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .slide-twelve .circle-progress {
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .slide-twelve .circle-bg {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.2);
+            stroke-width: 8;
+        }
+
+        .slide-twelve .circle-progress-value {
+            fill: none;
+            stroke-width: 8;
+            stroke-linecap: round;
+            transform: rotate(-90deg);
+            transform-origin: center;
+            transition: stroke-dasharray 0.3s ease;
+        }
+
+        .slide-twelve .circle-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* ####### */
+
+        .slide-four .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide-two .slide-content,
+        .slide-three .slide-content {
+            padding: 40px;
+            z-index: 10;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .arrow-connector {
+            display: none;
+        }
+
+        .slide.slide-eleven {
+            overflow-y: scroll;
+        }
+
+        .swiper-button-next,
+        .swiper-rtl .swiper-button-prev {
+            background-color: #4d5b72;
+            color: #fff;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 24px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: auto;
+            height: auto;
+            padding: 10px 15px;
+        }
+
+        @media(max-width:767px) {
+            .slide-one .slide-content {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 10;
+                position: relative;
+                padding: 30px 20px;
+            }
+
+            .slide-two .slide-content,
+            .slide-three .slide-content {
+                height: auto;
+            }
+
+            .slide {
+                height: auto;
+                overflow-y: scroll;
+            }
+
+            .grid-cols-4 {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+
+            .flex-row {
+                flex-direction: column;
+            }
+
+            .grid-cols-2 {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+
+            .grid-cols-3 {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+
+            .slide-four .slide-content {
+                height: auto;
+            }
+
+            .arrow-connector {
+                display: none;
+            }
+
+            .text-4xl {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            .text-5xl {
+                font-size: 2rem;
+                line-height: 1;
+            }
+
+            .slide .slide-content {
+                padding: 80px 25px 0 25px;
+                z-index: 10;
+                position: relative;
+            }
+
+            .table-responsive {
+                overflow-x: scroll;
+            }
+
+            .slide-three .stc-blue {
+                color: #4d5b72;
+                text-align: center;
+            }
+
+            .slide.slide-six .slide-content .grid {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .slide-eleven .timeline-content {
+                width: 100%;
+            }
+
+            .slide-eleven .timeline-marker {
+                display: none;
+            }
+
+            .slide.slide-one .slide-content {
+                height: 100vh;
+            }
+
+            .slide.slide-one {
+                overflow: hidden;
+            }
+
+            .logo-container {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="swiper mySwiper" dir="rtl">
+        <div class="swiper-wrapper">
+            <!-- 1 -->
+            <div class="swiper-slide">
+                <!-- slide one -->
+                <div class="slide slide-one">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content text-center">
+                        <h1 class="text-5xl font-black mb-6 stc-blue title-animation">
+                            شركة الاتصالات السعودية
+
+                        </h1>
+                        <h2 class="text-4xl font-bold mb-10 stc-blue title-animation">
+                            تحليل استثماري متقدم
+                        </h2>
+                        <p class="text-2xl mb-12 text-gray-700 max-w-4xl subtitle-animation">
+                            كيف أصبحت شركة الاتصالات السعودية الاستثمار الأمثل ضمن رؤية 2030
+                        </p>
+
+                        <div class="highlight-box stc-bg-blue text-white py-4 px-8 rounded-lg shadow-lg">
+                            <p class="text-xl font-bold">
+                                "الاستثمار في البنية التحتية الرقمية لمستقبل المملكة"
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+
+                    <!-- Date and presenter info -->
+                    <div class="absolute bottom-6 right-6 text-right">
+                        <p class="font-bold text-gray-700">مايو 2025</p>
+                    </div>
+                </div>
+
+                <!-- end slide one -->
+            </div>
+            <!-- 2 -->
+            <div class="swiper-slide">
+                <!-- slide two -->
+                <div class="slide slide-two">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content">
+                        <h1 class="text-4xl font-black mb-6 stc-blue text-center">
+                            <i class="fas fa-search-dollar ml-2"></i>
+                            اختبار الـ 100,000 ريال: النتائج
+                        </h1>
+
+                        <div class="text-lg text-gray-600 mb-8 text-center font-medium">
+                            "لو استثمرت 100,000 ريال في شركة الاتصالات السعودية قبل 5 سنوات، بينما كان أصدقاؤك يلاحقون
+                            أسهم التقنية
+                            'الأكثر جاذبية'، لكنت اليوم المستثمر الرابح"
+                        </div>
+
+                        <div class="grid grid-cols-4 gap-6 mb-8">
+                            <div class="stat-card animate-delay-1">
+                                <div class="text-lg text-gray-500">السعر الحالي</div>
+                                <div class="flex items-baseline">
+                                    <span class="text-3xl font-bold stc-blue">42.95</span>
+                                    <span class="text-lg mr-1 text-gray-500">ريال</span>
+                                </div>
+                                <div class="text-sm text-gray-400 mt-2">مايو 2025</div>
+                            </div>
+
+                            <div class="stat-card animate-delay-2">
+                                <div class="text-lg text-gray-500">أداء 5 سنوات</div>
+                                <div class="text-3xl font-bold stc-blue">
+                                    <i class="fas fa-plus-circle text-green-500"></i> 7.50%
+                                </div>
+                                <div class="text-sm text-gray-400 mt-2">عائد استثماري مستدام</div>
+                            </div>
+
+                            <div class="stat-card animate-delay-3">
+                                <div class="text-lg text-gray-500">عائد التوزيعات</div>
+                                <div class="text-3xl font-bold text-green-600">
+                                    9.08%
+                                </div>
+                                <div class="text-sm text-gray-400 mt-2">أعلى من متوسط السوق بـ 2-3 أضعاف</div>
+                            </div>
+
+                            <div class="stat-card animate-delay-4">
+                                <div class="text-lg text-gray-500">أداء العام الحالي</div>
+                                <div class="flex items-baseline">
+                                    <span class="text-3xl font-bold text-green-600">+6.97%</span>
+                                </div>
+                                <div class="text-sm text-green-500 mt-2">+13.01% آخر 12 شهر</div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row gap-8">
+                            <div class="flex-1">
+                                <div class="chart-container mb-4">
+                                    <canvas id="performanceChart"></canvas>
+                                </div>
+                                <div class="text-center text-sm text-gray-500">مقارنة أداء STC مع مؤشر تاسي لعام 2024
+                                </div>
+                            </div>
+
+                            <div class="flex-1">
+                                <div class="conclusion-box">
+                                    <h3 class="text-xl font-bold mb-2">الخلاصة:</h3>
+                                    <p class="text-lg mb-3">بينما سجل مؤشر تاسي ارتفاعاً بنسبة 0.6% فقط في عام 2024
+                                        (12,037 نقطة
+                                        مقابل 11,967 في 2023)، حصل مساهمو STC على عائدات توزيعات ضخمة غيرت كل شيء.</p>
+                                    <div class="bg-white text-blue-800 p-3 rounded-lg font-bold text-center text-xl">
+                                        <i class="fas fa-crown ml-1"></i>
+                                        توزيعات استثنائية بقيمة 10 مليار ريال في 2024
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- end slide two -->
+            </div>
+
+            <!-- 3 -->
+            <div class="swiper-slide">
+                <!-- slide three -->
+
+                <div class="slide slide-three">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content">
+                        <h1 class="text-4xl font-bold mb-6 stc-blue text-center">
+                            <i class="fas fa-chart-bar ml-2"></i>
+                            واقع الأداء المالي
+                        </h1>
+
+                        <div class="grid grid-cols-2 gap-8 mb-6">
+                            <!-- Left side: Table -->
+                            <div class="animate-fade-in">
+                                <h3 class="text-2xl font-bold mb-3 stc-blue">مقارنة STC مع المؤشرات المرجعية</h3>
+                                <div class="table-responsive">
+                                    <table class="comparison-table">
+                                        <thead>
+                                            <tr>
+                                                <th>المقياس</th>
+                                                <th>STC</th>
+                                                <th>تاسي</th>
+                                                <th>التحليل</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>أداء 2024</td>
+                                                <td class="font-bold text-green-600">توزيعات استثنائية</td>
+                                                <td>+0.6%</td>
+                                                <td>تفوق كبير لـ STC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>عائد التوزيعات</td>
+                                                <td class="font-bold text-green-600">9.08%</td>
+                                                <td>3-4%</td>
+                                                <td>2-3 أضعاف المتوسط</td>
+                                            </tr>
+                                            <tr>
+                                                <td>القيمة السوقية</td>
+                                                <td class="font-bold">214.19 مليار ريال</td>
+                                                <td>-</td>
+                                                <td>وزن سوقي كبير</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مضاعف الربحية</td>
+                                                <td>18.93</td>
+                                                <td>16.6</td>
+                                                <td>قسط مبرر</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <!-- Right side: Chart -->
+                            <div class="animate-fade-in animate-delay-1">
+                                <h3 class="text-2xl font-bold mb-3 stc-blue">الانطلاقة المالية 2024</h3>
+                                <div class="chart-container mb-2">
+                                    <canvas id="financialChart"></canvas>
+                                </div>
+                                <p class="text-sm text-gray-500 text-center">المصدر: تقرير STC الربع الرابع 2024</p>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Cards -->
+                        <div class="grid grid-cols-3 gap-6">
+                            <div class="highlight-card highlight-card-blue animate-fade-in animate-delay-1">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="text-xl font-bold stc-blue">صافي الربح</h4>
+                                    <i class="fas fa-arrow-trend-up text-2xl text-green-600"></i>
+                                </div>
+                                <div class="text-3xl font-black mb-2">25 مليار ريال</div>
+                                <div class="text-green-600 font-bold">
+                                    <i class="fas fa-chart-line ml-1"></i>
+                                    تضاعف تقريباً
+                                </div>
+                            </div>
+
+                            <div class="highlight-card highlight-card-green animate-fade-in animate-delay-2">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="text-xl font-bold text-green-600">نمو الإيرادات</h4>
+                                    <i class="fas fa-sack-dollar text-2xl text-green-600"></i>
+                                </div>
+                                <div class="text-3xl font-black mb-2">76 مليار ريال</div>
+                                <div class="text-green-600 font-bold">
+                                    <i class="fas fa-plus-circle ml-1"></i>
+                                    زيادة 6%
+                                </div>
+                            </div>
+
+                            <div class="highlight-card highlight-card-orange animate-fade-in animate-delay-3">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="text-xl font-bold text-amber-600">إجمالي التوزيعات</h4>
+                                    <i class="fas fa-coins text-2xl text-amber-600"></i>
+                                </div>
+                                <div class="text-3xl font-black mb-2">13 مليار ريال</div>
+                                <div class="flex justify-between text-gray-600">
+                                    <span><i class="fas fa-star-of-life ml-1"></i> 10 مليار استثنائية</span>
+                                    <span><i class="fas fa-repeat ml-1"></i> 3 مليار اعتيادية</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end slide three -->
+            </div>
+            <!-- 4 -->
+            <div class="swiper-slide">
+                <!-- slide four -->
+
+                <div class="slide slide-four">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content">
+                        <h1 class="text-4xl font-bold mb-6 stc-blue text-center">
+                            <i class="fas fa-rocket ml-2"></i>
+                            قصة التحول الاستراتيجي
+                        </h1>
+
+                        <div class="text-lg text-gray-600 mb-6 text-center">
+                            التحول من شركة اتصالات تقليدية إلى محرك رئيسي للتحول الرقمي في المملكة
+                        </div>
+
+                        <div class="grid grid-cols-4 gap-6">
+                            <!-- Layer 1: Digital Empire -->
+                            <div class="relative animate-fade-in animate-delay-1">
+                                <div class="transformation-card">
+                                    <div class="card-number">١</div>
+                                    <div class="icon-wrapper icon-wrapper-1 mx-auto">
+                                        <i class="fas fa-globe-asia"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3 stc-blue text-center">من اتصالات إلى إمبراطورية
+                                        رقمية</h3>
+                                    <ul class="text-gray-700">
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> تحول من
+                                            مشغل
+                                            اتصالات بسيط إلى نظام بيئي رقمي متكامل</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> بنك STC
+                                            حصل على
+                                            ترخيص من البنك المركزي السعودي</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> STC Pay
+                                            أول شركة
+                                            تقنية مالية تصل قيمتها إلى مليار دولار في الشرق الأوسط</li>
+                                        <li><i class="fas fa-check-circle text-green-500 ml-1"></i> منصات متعددة
+                                            للمدفوعات الرقمية
+                                            والألعاب والترفيه</li>
+                                    </ul>
+                                </div>
+                                <div class="arrow-connector">
+                                    <i class="fas fa-chevron-left"></i>
+                                </div>
+                            </div>
+
+                            <!-- Layer 2: Infrastructure Monetization -->
+                            <div class="relative animate-fade-in animate-delay-2">
+                                <div class="transformation-card">
+                                    <div class="card-number">٢</div>
+                                    <div class="icon-wrapper icon-wrapper-2 mx-auto">
+                                        <i class="fas fa-tower-cell"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3 text-green-600 text-center">تحقيق عوائد من البنية
+                                        التحتية</h3>
+                                    <ul class="text-gray-700">
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> منجم
+                                            ذهب الأبراج:
+                                            TAWAL بقيمة 5.85 مليار دولار</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> ~30,000
+                                            موقع أبراج
+                                            جوال</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> إيرادات
+                                            سنوية
+                                            تقديرية تبلغ 1.3 مليار دولار</li>
+                                        <li><i class="fas fa-check-circle text-green-500 ml-1"></i> صندوق الاستثمارات
+                                            العامة يملك
+                                            54%، مجموعة STC 43.1%</li>
+                                    </ul>
+                                </div>
+                                <div class="arrow-connector">
+                                    <i class="fas fa-chevron-left"></i>
+                                </div>
+                            </div>
+
+                            <!-- Layer 3: International Expansion -->
+                            <div class="relative animate-fade-in animate-delay-3">
+                                <div class="transformation-card">
+                                    <div class="card-number">٣</div>
+                                    <div class="icon-wrapper icon-wrapper-3 mx-auto">
+                                        <i class="fas fa-earth-europe"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3 text-amber-600 text-center">التوسع الدولي</h3>
+                                    <ul class="text-gray-700">
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> الخطوة
+                                            الاستراتيجية
+                                            Telefónica: استحواذ على حصة 9.9% مقابل 2.1 مليار يورو</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> أصبحت
+                                            أكبر مساهم في
+                                            Telefónica</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> ردة فعل
+                                            الحكومة
+                                            الإسبانية: شراء حصة تصل إلى 10%</li>
+                                        <li><i class="fas fa-check-circle text-green-500 ml-1"></i> فتح آفاق جديدة
+                                            للتوسع العالمي
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="arrow-connector">
+                                    <i class="fas fa-chevron-left"></i>
+                                </div>
+                            </div>
+
+                            <!-- Layer 4: Vision 2030 Champion -->
+                            <div class="animate-fade-in animate-delay-4">
+                                <div class="transformation-card">
+                                    <div class="card-number">٤</div>
+                                    <div class="icon-wrapper icon-wrapper-4 mx-auto">
+                                        <i class="fas fa-crown"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3 text-purple-600 text-center">بطل البنية التحتية
+                                        لرؤية 2030
+                                    </h3>
+                                    <ul class="text-gray-700">
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> عقود
+                                            حكومية بقيمة
+                                            32.6 مليار ريال (8.71 مليار دولار) للبنية التحتية للاتصالات</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> 18
+                                            شهراً للتحضير +
+                                            15 سنة للإدارة التشغيلية</li>
+                                        <li class="mb-2"><i class="fas fa-check-circle text-green-500 ml-1"></i> شريك
+                                            استراتيجي في
+                                            تحقيق رؤية 2030</li>
+                                        <li><i class="fas fa-check-circle text-green-500 ml-1"></i> أهمية استراتيجية:
+                                            جهة حكومية غير
+                                            معلنة تشير إلى الأهمية للأمن القومي</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end slide four -->
+            </div>
+
+            <!-- 5 -->
+            <div class="swiper-slide">
+                <!-- slide five -->
+
+                <div class="slide slide-five">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content">
+                        <h1 class="text-4xl font-bold mb-6 stc-blue text-center">
+                            <i class="fas fa-exclamation-triangle ml-2"></i>
+                            المخاطر المحتملة
+                        </h1>
+
+                        <div class="text-lg text-gray-600 mb-6 text-center animate-fade-in">
+                            تحليل المخاطر الرئيسية التي قد تواجه الاستثمار في شركة الاتصالات السعودية
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <!-- Execution Risks -->
+                            <div class="animate-fade-in animate-delay-1">
+                                <div class="risk-card pb-10">
+                                    <div class="risk-level risk-high">مخاطر التنفيذ (عالية)</div>
+                                    <div class="risk-icon">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div class="pt-10">
+                                        <div class="risk-item">
+                                            <div class="font-bold stc-blue">الاعتماد على رؤية 2030:</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i> خطر:
+                                                تأخير المشاريع الضخمة أو خفض الميزانيات</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i>
+                                                التأثير: تأخير الإيرادات من العقود الحكومية</div>
+                                            <div class="flex justify-end">
+                                                <span class="probability-badge prob-medium">احتمالية متوسطة</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="risk-item">
+                                            <div class="font-bold stc-blue">تعقيدات التوسع الدولي:</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i> خطر:
+                                                التدقيق التنظيمي من الحكومة الإسبانية والاتحاد الأوروبي</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i>
+                                                التأثير: تقييد القيمة الاستراتيجية أو فرض التخارج</div>
+                                            <div class="flex justify-end">
+                                                <span class="probability-badge prob-medium">احتمالية متوسطة</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Financial Risks -->
+                            <div class="animate-fade-in animate-delay-2">
+                                <div class="risk-card pb-10">
+                                    <div class="risk-level risk-medium">المخاطر المالية (متوسطة)</div>
+                                    <div class="risk-icon">
+                                        <i class="fas fa-sack-dollar"></i>
+                                    </div>
+                                    <div class="pt-10">
+                                        <div class="risk-item">
+                                            <div class="font-bold stc-blue">استدامة التوزيعات:</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i> خطر:
+                                                عائد 9.08% قد يكون غير مستدام</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i>
+                                                التأثير: تخفيضات الأرباح ستؤثر على سعر السهم وثقة المستثمرين</div>
+                                            <div class="flex justify-end">
+                                                <span class="probability-badge prob-medium">احتمالية
+                                                    منخفضة-متوسطة</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="risk-item">
+                                            <div class="font-bold stc-blue">مخاوف الرافعة المالية:</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i> خطر:
+                                                استثمار 2.1 مليار يورو في Telefónica + التوسع المحلي</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i>
+                                                التأثير: مستويات ديون أعلى قد تضغط على المرونة المالية</div>
+                                            <div class="flex justify-end">
+                                                <span class="probability-badge prob-medium">احتمالية متوسطة</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Market Risks -->
+                            <div class="animate-fade-in animate-delay-3">
+                                <div class="risk-card pb-10">
+                                    <div class="risk-level risk-medium">مخاطر السوق (متوسطة)</div>
+                                    <div class="risk-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="pt-10">
+                                        <div class="risk-item">
+                                            <div class="font-bold stc-blue">الارتباط بأسعار النفط:</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i> خطر:
+                                                ارتباط الاقتصاد السعودي بأسعار النفط (نطاق 68-93 دولار في 2024)</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i>
+                                                التأثير: انخفاض الإنفاق الحكومي على البنية التحتية</div>
+                                            <div class="flex justify-end">
+                                                <span class="probability-badge prob-high">احتمالية عالية</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="risk-item">
+                                            <div class="font-bold stc-blue">المنافسة الإقليمية:</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i> خطر:
+                                                سوق الاتصالات في دول الخليج ينمو بمعدل 11.07% سنوياً</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i>
+                                                التأثير: تآكل الحصة السوقية وضغط على الأسعار</div>
+                                            <div class="flex justify-end">
+                                                <span class="probability-badge prob-medium">احتمالية متوسطة</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Regulatory Risks -->
+                            <div class="animate-fade-in animate-delay-4">
+                                <div class="risk-card pb-10">
+                                    <div class="risk-level risk-low-medium">المخاطر التنظيمية (منخفضة-متوسطة)</div>
+                                    <div class="risk-icon">
+                                        <i class="fas fa-balance-scale"></i>
+                                    </div>
+                                    <div class="pt-10">
+                                        <div class="risk-item">
+                                            <div class="font-bold stc-blue">تغييرات في الملكية الحكومية:</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i> خطر:
+                                                بيع صندوق الاستثمارات العامة لحصص بشكل دوري (2% مقابل 3.86 مليار ريال في
+                                                2024)</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i>
+                                                التأثير: انخفاض الدعم الحكومي والاستراتيجي</div>
+                                            <div class="flex justify-end">
+                                                <span class="probability-badge prob-low">احتمالية منخفضة</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="risk-item">
+                                            <div class="font-bold stc-blue">تغييرات تنظيمية محتملة:</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i> خطر:
+                                                تغيير في السياسات التنظيمية لقطاع الاتصالات</div>
+                                            <div class="text-sm text-gray-600 mr-4 mt-1"><i
+                                                    class="fas fa-dot-circle ml-1"></i>
+                                                التأثير: زيادة التكاليف التشغيلية أو تقييد النمو</div>
+                                            <div class="flex justify-end">
+                                                <span class="probability-badge prob-medium">احتمالية
+                                                    منخفضة-متوسطة</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end slide five -->
+            </div>
+            <!-- 6 -->
+            <div class="swiper-slide">
+                <!-- slide six -->
+                <div class="slide slide-six">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content">
+                        <h1 class="text-4xl font-bold mb-6 stc-blue text-center">
+                            <i class="fas fa-calculator ml-2"></i>
+                            التقييم المالي
+                        </h1>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <!-- Current Valuation Metrics -->
+                            <div class="animate-fade-in animate-delay-1">
+                                <div class="value-card">
+                                    <h3 class="text-xl font-bold mb-3 stc-blue text-center">مؤشرات التقييم الحالية
+                                        (الربع الأول
+                                        2025)</h3>
+
+                                    <div class="grid grid-cols-2 gap-4 mb-4">
+                                        <!-- P/E Ratio -->
+                                        <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                            <div class="metric-circle stc-bg-blue">
+                                                <span class="text-white font-bold text-2xl">15.65</span>
+                                            </div>
+                                            <div class="font-bold">مضاعف الربحية</div>
+                                            <div class="text-sm text-gray-500">مقارنة بـ 16.6 متوسط مؤشر تاسي</div>
+                                        </div>
+
+                                        <!-- Dividend Yield -->
+                                        <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                            <div class="metric-circle" style="background-color: #22c55e;">
+                                                <span class="text-white font-bold text-2xl">9.08%</span>
+                                            </div>
+                                            <div class="font-bold">عائد التوزيعات</div>
+                                            <div class="text-sm text-gray-500">يشمل التوزيعات الخاصة</div>
+                                        </div>
+
+                                        <!-- Market Cap -->
+                                        <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                            <div class="metric-circle" style="background-color: #8b5cf6;">
+                                                <span class="text-white font-bold text-lg">214.19</span>
+                                            </div>
+                                            <div class="font-bold">القيمة السوقية</div>
+                                            <div class="text-sm text-gray-500">مليار ريال سعودي</div>
+                                        </div>
+
+                                        <!-- EPS -->
+                                        <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                            <div class="metric-circle" style="background-color: #f59e0b;">
+                                                <span class="text-white font-bold text-2xl">0.73</span>
+                                            </div>
+                                            <div class="font-bold">ربحية السهم</div>
+                                            <div class="text-sm text-gray-500">ريال سعودي (ربع سنوي)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center p-3 bg-blue-50 rounded-lg">
+                                        <div class="font-bold mb-1">النطاق السعري (52 أسبوع)</div>
+                                        <div class="flex justify-center items-center">
+                                            <span class="text-red-500 font-bold">36.10</span>
+                                            <div class="mx-3 h-2 bg-gradient-to-r from-red-500 via-blue-500 to-green-500 rounded-full flex-grow"
+                                                style="width: 150px;"></div>
+                                            <span class="text-green-500 font-bold">48.30</span>
+                                        </div>
+                                        <div class="text-center mt-2">
+                                            <span class="font-bold stc-blue">السعر الحالي: 42.95</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fair Value Analysis Chart -->
+                            <div class="animate-fade-in animate-delay-2">
+                                <div class="value-card">
+                                    <h3 class="text-xl font-bold mb-3 stc-blue text-center">تحليل القيمة العادلة</h3>
+                                    <div class="chart-container">
+                                        <canvas id="valuationChart"></canvas>
+                                    </div>
+
+                                    <div class="grid grid-cols-3 gap-3 mt-4">
+                                        <!-- Bull Case -->
+                                        <div class="text-center p-2 rounded-lg bull-card">
+                                            <div class="font-bold text-green-600">سيناريو متفائل</div>
+                                            <div class="text-xl font-bold">50-55 ريال</div>
+                                            <div class="text-sm text-gray-600">+15-25% من المستوى الحالي</div>
+                                        </div>
+
+                                        <!-- Base Case -->
+                                        <div class="text-center p-2 rounded-lg base-card">
+                                            <div class="font-bold stc-blue">سيناريو أساسي</div>
+                                            <div class="text-xl font-bold">45-48 ريال</div>
+                                            <div class="text-sm text-gray-600">+5-15% من المستوى الحالي</div>
+                                        </div>
+
+                                        <!-- Bear Case -->
+                                        <div class="text-center p-2 rounded-lg bear-card">
+                                            <div class="font-bold text-red-600">سيناريو متشائم</div>
+                                            <div class="text-xl font-bold">35-40 ريال</div>
+                                            <div class="text-sm text-gray-600">-15-20% من المستوى الحالي</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Investment Recommendation -->
+                            <div class="col-span-2 animate-fade-in animate-delay-3">
+                                <div class="value-card">
+                                    <div class="price-tag">
+                                        <i class="fas fa-tag ml-1"></i> 42.95 ريال
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3 stc-blue text-center">التوصية الاستثمارية</h3>
+
+                                    <div class="grid grid-cols-4 gap-4 items-center">
+                                        <div class="col-span-1 text-center">
+                                            <div class="bg-blue-100 rounded-full p-4 inline-block">
+                                                <i class="fas fa-thumbs-up text-5xl stc-blue"></i>
+                                            </div>
+                                            <div class="font-bold text-lg mt-2 stc-blue">احتفاظ مع شراء عند الانخفاض
+                                            </div>
+                                        </div>
+
+                                        <div class="col-span-3 grid grid-cols-3 gap-3">
+                                            <div class="p-3 bg-gray-50 rounded-lg text-center">
+                                                <div class="text-sm text-gray-500">السعر المستهدف</div>
+                                                <div class="font-bold text-xl stc-blue">47 ريال</div>
+                                                <div class="text-sm text-gray-500">(سيناريو أساسي)</div>
+                                            </div>
+
+                                            <div class="p-3 bg-gray-50 rounded-lg text-center">
+                                                <div class="text-sm text-gray-500">وقف الخسارة</div>
+                                                <div class="font-bold text-xl text-red-600">38 ريال</div>
+                                                <div class="text-sm text-gray-500">(سيناريو متشائم)</div>
+                                            </div>
+
+                                            <div class="p-3 bg-gray-50 rounded-lg text-center">
+                                                <div class="text-sm text-gray-500">العائد المعدل للمخاطر</div>
+                                                <div class="font-bold text-xl text-green-600">جذاب</div>
+                                                <div class="text-sm text-gray-500">بحماية عائد توزيعات 9%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- end slide six -->
+            </div>
+
+            <!-- 7 -->
+            <div class="swiper-slide">
+
+                <!-- slide seven -->
+                <div class="slide slide-seven">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content">
+                        <h1 class="text-4xl font-bold mb-6 stc-blue text-center">
+                            <i class="fas fa-award ml-2"></i>
+                            مقارنة الأقران
+                        </h1>
+
+                        <div class="text-lg text-gray-600 mb-6 text-center animate-fade-in">
+                            مقارنة شركة الاتصالات السعودية مع المنافسين الإقليميين
+                        </div>
+
+                        <!-- Telecom Comparison Table -->
+                        <div class="mb-6 animate-fade-in animate-delay-1">
+                            <div class="table-responsive">
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th width="20%">الشركة</th>
+                                            <th width="20%">القيمة السوقية</th>
+                                            <th width="20%">القيمة التجارية للعلامة</th>
+                                            <th width="20%">نقاط القوة</th>
+                                            <th width="20%">نقاط الضعف</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="stc-row">
+                                            <td>
+                                                <div class="flex items-center justify-center">
+                                                    <div class="company-logo stc-bg-blue">STC</div>
+                                                    <span>الاتصالات السعودية</span>
+                                                </div>
+                                            </td>
+                                            <td>214 مليار ريال</td>
+                                            <td>16.1 مليار دولار</td>
+                                            <td>الدعم الحكومي، رؤية 2030</td>
+                                            <td>مخاطر التنفيذ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="flex items-center justify-center">
+                                                    <div class="company-logo" style="background-color: #008000;">e&
+                                                    </div>
+                                                    <span>اتصالات e&</span>
+                                                </div>
+                                            </td>
+                                            <td>~45 مليار دولار</td>
+                                            <td>15.3 مليار دولار</td>
+                                            <td>رابع أعلى منشئ قيمة عالميًا</td>
+                                            <td>محدودية أسواق النمو</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="flex items-center justify-center">
+                                                    <div class="company-logo" style="background-color: #7b2cbf;">زين
+                                                    </div>
+                                                    <span>زين</span>
+                                                </div>
+                                            </td>
+                                            <td>~8 مليار دولار</td>
+                                            <td>أقل</td>
+                                            <td>التنوع الإقليمي</td>
+                                            <td>منافسة أعلى</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- STC Competitive Advantages -->
+                        <h3 class="text-xl font-bold mb-3 stc-blue text-center animate-fade-in animate-delay-2">المزايا
+                            التنافسية
+                            لشركة الاتصالات السعودية</h3>
+
+                        <div class="grid grid-cols-4 gap-4">
+                            <!-- Sovereign Backing -->
+                            <div class="animate-fade-in animate-delay-2">
+                                <div class="advantage-card text-center">
+                                    <div class="advantage-icon stc-bg-blue">
+                                        <i class="fas fa-landmark"></i>
+                                    </div>
+                                    <h4 class="text-lg font-bold stc-blue">الدعم السيادي</h4>
+                                    <p class="text-gray-600 text-sm">62% ملكية صندوق الاستثمارات العامة توفر وصولًا غير
+                                        محدود لرأس
+                                        المال</p>
+                                    <div class="highlight-badge stc-bg-blue">تقرير سنوي 2024</div>
+                                </div>
+                            </div>
+
+                            <!-- Market Dominance -->
+                            <div class="animate-fade-in animate-delay-3">
+                                <div class="advantage-card text-center">
+                                    <div class="advantage-icon" style="background-color: #22c55e;">
+                                        <i class="fas fa-crown"></i>
+                                    </div>
+                                    <h4 class="text-lg font-bold" style="color: #22c55e;">هيمنة السوق</h4>
+                                    <p class="text-gray-600 text-sm">متقدمة قليلاً على اتصالات e& في قيمة العلامة
+                                        التجارية، رغم تضيق
+                                        الفجوة</p>
+                                    <div class="highlight-badge" style="background-color: #22c55e;">براند فاينانس 2025
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Vision 2030 Integration -->
+                            <div class="animate-fade-in animate-delay-3">
+                                <div class="advantage-card text-center">
+                                    <div class="advantage-icon" style="background-color: #8b5cf6;">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <h4 class="text-lg font-bold" style="color: #8b5cf6;">تكامل رؤية 2030</h4>
+                                    <p class="text-gray-600 text-sm">تموضع فريد كممكّن للتحول الرقمي للمملكة</p>
+                                    <div class="highlight-badge" style="background-color: #8b5cf6;">ميزة استراتيجية
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- International Reach -->
+                            <div class="animate-fade-in animate-delay-4">
+                                <div class="advantage-card text-center">
+                                    <div class="advantage-icon" style="background-color: #f59e0b;">
+                                        <i class="fas fa-globe-europe"></i>
+                                    </div>
+                                    <h4 class="text-lg font-bold" style="color: #f59e0b;">الوصول الدولي</h4>
+                                    <p class="text-gray-600 text-sm">استثمار 2.1 مليار يورو في Telefónica يوفر تواجدًا
+                                        في أوروبا</p>
+                                    <div class="highlight-badge" style="background-color: #f59e0b;">رويترز 2023</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- end slide seven -->
+            </div>
+            <!-- 8 -->
+            <div class="swiper-slide">
+
+                <!-- slide eight -->
+
+                <div class="slide slide-eight">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content">
+                        <h1 class="text-4xl font-bold mb-6 stc-blue text-center animate-fade-in">
+                            <i class="fas fa-rocket ml-2"></i>
+                            لماذا قد تفاجئ STC المستثمرين؟
+                        </h1>
+
+                        <div class="text-lg text-gray-600 mb-8 text-center animate-fade-in animate-delay-1">
+                            المحفزات الرئيسية لنمو الشركة في المستقبل
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-8">
+                            <!-- Catalyst 1: Government Contract Pipeline -->
+                            <div class="animate-fade-in animate-delay-1">
+                                <div class="catalyst-card card-1">
+                                    <div class="catalyst-icon" style="background-color: #3b82f6;">
+                                        <i class="fas fa-file-contract"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3" style="color: #3b82f6;">خط أنابيب العقود الحكومية
+                                    </h3>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #3b82f6;"></div>
+                                        <p class="text-gray-700">عقد بقيمة 32.6 مليار ريال هو مجرد البداية</p>
+                                    </div>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #3b82f6;"></div>
+                                        <p class="text-gray-700">رؤية 2030 تتطلب استثمارات ضخمة في البنية الرقمية</p>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #3b82f6;"></div>
+                                        <p class="text-gray-700">STC هي الشريك المفضل للحكومة</p>
+                                    </div>
+
+                                    <div class="mt-4 text-center">
+                                        <span class="stat-highlight" style="color: #3b82f6;">
+                                            32.6 مليار ريال
+                                            <span class="pulse-dot" style="background-color: #3b82f6;">
+                                            </span>
+                                        </span>
+                                        <span class="text-sm text-gray-500">قيمة العقد الحالي مع الحكومة</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Catalyst 2: Digital Services Scaling -->
+                            <div class="animate-fade-in animate-delay-2">
+                                <div class="catalyst-card card-2">
+                                    <div class="catalyst-icon" style="background-color: #22c55e;">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3" style="color: #22c55e;">نمو الخدمات الرقمية</h3>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #22c55e;"></div>
+                                        <p class="text-gray-700">تقييم STC Pay بـ 1.3 مليار دولار يظهر إمكانيات التقنية
+                                            المالية</p>
+                                    </div>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #22c55e;"></div>
+                                        <p class="text-gray-700">نمو سريع في إيرادات الخدمات المصرفية والألعاب والترفيه
+                                        </p>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #22c55e;"></div>
+                                        <p class="text-gray-700">فرص توسع متعددة مع نضج الخدمات</p>
+                                    </div>
+
+                                    <div class="mt-4 text-center">
+                                        <span class="stat-highlight" style="color: #22c55e;">
+                                            1.3 مليار دولار
+                                            <span class="pulse-dot" style="background-color: #22c55e;">
+                                            </span>
+                                        </span>
+                                        <span class="text-sm text-gray-500">تقييم STC Pay</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Catalyst 3: International Expansion -->
+                            <div class="animate-fade-in animate-delay-3">
+                                <div class="catalyst-card card-3">
+                                    <div class="catalyst-icon" style="background-color: #f59e0b;">
+                                        <i class="fas fa-globe-americas"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3" style="color: #f59e0b;">التوسع الدولي</h3>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f59e0b;"></div>
+                                        <p class="text-gray-700">حصة بـ 9.9% في تيليفونيكا الإسبانية توفر وصولاً للسوق
+                                            الأوروبية</p>
+                                    </div>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f59e0b;"></div>
+                                        <p class="text-gray-700">إمكانية المزيد من الاستثمارات الدولية في قطاع الاتصالات
+                                        </p>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f59e0b;"></div>
+                                        <p class="text-gray-700">فرص التوحيد الإقليمي</p>
+                                    </div>
+
+                                    <div class="mt-4 text-center">
+                                        <span class="stat-highlight" style="color: #f59e0b;">
+                                            2.1 مليار يورو
+                                            <span class="pulse-dot" style="background-color: #f59e0b;">
+                                            </span>
+                                        </span>
+                                        <span class="text-sm text-gray-500">قيمة الاستثمار في تيليفونيكا</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Catalyst 4: Infrastructure Monetization -->
+                            <div class="animate-fade-in animate-delay-4">
+                                <div class="catalyst-card card-4">
+                                    <div class="catalyst-icon" style="background-color: #8b5cf6;">
+                                        <i class="fas fa-broadcast-tower"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3" style="color: #8b5cf6;">تحقيق العائد من البنية
+                                        التحتية</h3>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #8b5cf6;"></div>
+                                        <p class="text-gray-700">تقييم TAWAL بـ 5.85 مليار دولار يكشف القيمة المخفية</p>
+                                    </div>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #8b5cf6;"></div>
+                                        <p class="text-gray-700">أصول الأبراج توفر تدفقات إيرادات مستقرة ومتكررة</p>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #8b5cf6;"></div>
+                                        <p class="text-gray-700">إمكانية فصل أصول إضافية لتحقيق قيمة إضافية</p>
+                                    </div>
+
+                                    <div class="mt-4 text-center">
+                                        <span class="stat-highlight" style="color: #8b5cf6;">
+                                            5.85 مليار دولار
+                                            <span class="pulse-dot" style="background-color: #8b5cf6;">
+                                            </span>
+                                        </span>
+                                        <span class="text-sm text-gray-500">تقييم TAWAL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end slide eight -->
+            </div>
+            <!-- 9 -->
+            <div class="swiper-slide">
+                <!-- slide nine -->
+                <div class="slide slide-nine">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content">
+                        <h1 class="text-4xl font-bold mb-6 stc-blue text-center animate-fade-in">
+                            <i class="fas fa-exclamation-triangle ml-2"></i>
+                            ماذا قد يسير بشكل خاطئ؟
+                        </h1>
+
+                        <div class="text-lg text-gray-600 mb-8 text-center animate-fade-in animate-delay-1">
+                            السيناريوهات السلبية المحتملة وتأثيرها على الاستثمار
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-8">
+                            <!-- Risk Scenario 1: Vision 2030 Delays -->
+                            <div class="animate-fade-in animate-delay-1">
+                                <div class="risk-card" style="border-right-color: #ef4444;">
+                                    <div class="risk-label" style="background-color: #ef4444;">
+                                        مخاطرة عالية
+                                    </div>
+                                    <div class="risk-icon" style="background-color: #ef4444;">
+                                        <i class="fas fa-hourglass-half"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3" style="color: #ef4444;">تأخر رؤية 2030</h3>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #ef4444;"></div>
+                                        <p class="text-gray-700">تحويل الإنفاق الحكومي نحو مشاريع أخرى</p>
+                                    </div>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #ef4444;"></div>
+                                        <p class="text-gray-700">تقليص ميزانيات المشاريع الضخمة أو تمديد جداولها الزمنية
+                                        </p>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #ef4444;"></div>
+                                        <p class="text-gray-700">فقدان قصة نمو STC زخمها</p>
+                                    </div>
+
+                                    <div class="risk-meter">
+                                        <div class="risk-fill" style="background-color: #ef4444; width: 80%;"></div>
+                                    </div>
+                                    <div class="text-sm text-gray-500 text-left">
+                                        <span class="inline-block w-1/2">احتمالية منخفضة</span>
+                                        <span class="inline-block w-1/2 text-left">احتمالية عالية</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Risk Scenario 2: Dividend Unsustainability -->
+                            <div class="animate-fade-in animate-delay-2">
+                                <div class="risk-card" style="border-right-color: #f59e0b;">
+                                    <div class="risk-label" style="background-color: #f59e0b;">
+                                        مخاطرة متوسطة
+                                    </div>
+                                    <div class="risk-icon" style="background-color: #f59e0b;">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3" style="color: #f59e0b;">عدم استدامة توزيعات
+                                        الأرباح</h3>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f59e0b;"></div>
+                                        <p class="text-gray-700">العائد 9.08% قد يكون مرتفعًا جدًا للاستدامة</p>
+                                    </div>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f59e0b;"></div>
+                                        <p class="text-gray-700">تخفيضات الأرباح تؤدي إلى هروب المستثمرين</p>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f59e0b;"></div>
+                                        <p class="text-gray-700">انخفاض سعر السهم إلى مستويات معدلة بعد توزيعات الأرباح
+                                        </p>
+                                    </div>
+
+                                    <div class="risk-meter">
+                                        <div class="risk-fill" style="background-color: #f59e0b; width: 65%;"></div>
+                                    </div>
+                                    <div class="text-sm text-gray-500 text-left">
+                                        <span class="inline-block w-1/2">احتمالية منخفضة</span>
+                                        <span class="inline-block w-1/2 text-left">احتمالية عالية</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Risk Scenario 3: International Expansion Failure -->
+                            <div class="animate-fade-in animate-delay-3">
+                                <div class="risk-card" style="border-right-color: #f97316;">
+                                    <div class="risk-label" style="background-color: #f97316;">
+                                        مخاطرة متوسطة
+                                    </div>
+                                    <div class="risk-icon" style="background-color: #f97316;">
+                                        <i class="fas fa-globe-europe"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3" style="color: #f97316;">فشل خطط التوسع الدولي
+                                    </h3>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f97316;"></div>
+                                        <p class="text-gray-700">مقاومة تنظيمية إسبانية/أوروبية لحصة تيليفونيكا</p>
+                                    </div>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f97316;"></div>
+                                        <p class="text-gray-700">خسائر عملة من التعرض الأوروبي</p>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f97316;"></div>
+                                        <p class="text-gray-700">تشتيت الانتباه عن السوق السعودي الأساسي</p>
+                                    </div>
+
+                                    <div class="risk-meter">
+                                        <div class="risk-fill" style="background-color: #f97316; width: 60%;"></div>
+                                    </div>
+                                    <div class="text-sm text-gray-500 text-left">
+                                        <span class="inline-block w-1/2">احتمالية منخفضة</span>
+                                        <span class="inline-block w-1/2 text-left">احتمالية عالية</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Risk Scenario 4: Competition Intensifies -->
+                            <div class="animate-fade-in animate-delay-4">
+                                <div class="risk-card" style="border-right-color: #d97706;">
+                                    <div class="risk-label" style="background-color: #d97706;">
+                                        مخاطرة متوسطة
+                                    </div>
+                                    <div class="risk-icon" style="background-color: #d97706;">
+                                        <i class="fas fa-chess"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3" style="color: #d97706;">اشتداد المنافسة</h3>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #d97706;"></div>
+                                        <p class="text-gray-700">نمو سوق اتصالات الخليج بمعدل 11.07% سنويًا يجذب منافسين
+                                            جدد</p>
+                                    </div>
+
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #d97706;"></div>
+                                        <p class="text-gray-700">تآكل حصة السوق وضغوط الأسعار</p>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div class="w-3 h-3 rounded-full ml-2" style="background-color: #d97706;"></div>
+                                        <p class="text-gray-700">انخفاض الهوامش عبر جميع خطوط الأعمال</p>
+                                    </div>
+
+                                    <div class="risk-meter">
+                                        <div class="risk-fill" style="background-color: #d97706; width: 70%;"></div>
+                                    </div>
+                                    <div class="text-sm text-gray-500 text-left">
+                                        <span class="inline-block w-1/2">احتمالية منخفضة</span>
+                                        <span class="inline-block w-1/2 text-left">احتمالية عالية</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end slide nine -->
+            </div>
+            <!-- 10 -->
+            <div class="swiper-slide">
+                <!-- slide ten -->
+                <div class="slide slide-ten">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content">
+                        <h1 class="text-4xl font-bold mb-6 stc-blue text-center animate-fade-in">
+                            <i class="fas fa-lightbulb ml-2"></i>
+                            دروس الاستثمار المستفادة
+                        </h1>
+
+                        <div class="text-lg text-gray-600 mb-8 text-center animate-fade-in animate-delay-1">
+                            الرؤى الاستثمارية المستخلصة من تحليل شركة الاتصالات السعودية
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-8">
+                            <!-- Lesson 1 -->
+                            <div class="animate-fade-in animate-delay-1">
+                                <div class="lesson-card card-1">
+                                    <div class="lesson-badge">الدرس الأول</div>
+                                    <div class="lesson-icon">
+                                        <i class="fas fa-crown"></i>
+                                    </div>
+                                    <h3 class="lesson-title">الشركات "المملة" + الدعم السيادي = قيمة مخفية</h3>
+
+                                    <ul class="mb-4">
+                                        <li class="flex items-center mb-2">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #3b82f6;">
+                                            </div>
+                                            <p class="text-gray-700">شركات الاتصالات التقليدية غير جاذبة لمستثمري النمو
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center mb-2">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #3b82f6;">
+                                            </div>
+                                            <p class="text-gray-700">ملكية صندوق الاستثمارات العامة بنسبة 62% توفر مزايا
+                                                استراتيجية
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #3b82f6;">
+                                            </div>
+                                            <p class="text-gray-700">الإنفاق الحكومي على البنية التحتية يخلق فرص التوسع
+                                                المستقبلي
+                                            </p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="text-center mt-auto">
+                                        <div class="lesson-highlight">62%</div>
+                                        <p class="text-sm text-gray-500">ملكية صندوق الاستثمارات العامة</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Lesson 2 -->
+                            <div class="animate-fade-in animate-delay-2">
+                                <div class="lesson-card card-2">
+                                    <div class="lesson-badge">الدرس الثاني</div>
+                                    <div class="lesson-icon">
+                                        <i class="fas fa-city"></i>
+                                    </div>
+                                    <h3 class="lesson-title">شركات البنية التحتية لرؤية 2030 مقيمة بأقل من قيمتها</h3>
+
+                                    <ul class="mb-4">
+                                        <li class="flex items-center mb-2">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #10b981;">
+                                            </div>
+                                            <p class="text-gray-700">السوق يركز على المستفيدين الواضحين (البناء،
+                                                السياحة)</p>
+                                        </li>
+                                        <li class="flex items-center mb-2">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #10b981;">
+                                            </div>
+                                            <p class="text-gray-700">الفائزون المخفيون: الشركات التي تشكل العمود الفقري
+                                                الرقمي
+                                                للسعودية</p>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #10b981;">
+                                            </div>
+                                            <p class="text-gray-700">عقد بقيمة 32.6 مليار ريال يؤكد المكانة الاستراتيجية
+                                            </p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="text-center mt-auto">
+                                        <div class="lesson-highlight">32.6 مليار ريال</div>
+                                        <p class="text-sm text-gray-500">قيمة عقد البنية التحتية الحكومي</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Lesson 3 -->
+                            <div class="animate-fade-in animate-delay-3">
+                                <div class="lesson-card card-3">
+                                    <div class="lesson-badge">الدرس الثالث</div>
+                                    <div class="lesson-icon">
+                                        <i class="fas fa-broadcast-tower"></i>
+                                    </div>
+                                    <h3 class="lesson-title">تسييل الأصول يخلق قيمة</h3>
+
+                                    <ul class="mb-4">
+                                        <li class="flex items-center mb-2">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f59e0b;">
+                                            </div>
+                                            <p class="text-gray-700">فصل TAWAL كشف عن قيمة 5.85 مليار دولار كانت مخفية
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center mb-2">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f59e0b;">
+                                            </div>
+                                            <p class="text-gray-700">خطوط أعمال متعددة تقلل مخاطر الاعتماد على مصدر دخل
+                                                واحد</p>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #f59e0b;">
+                                            </div>
+                                            <p class="text-gray-700">أصول البنية التحتية توفر تدفقات نقدية مستقرة</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="text-center mt-auto">
+                                        <div class="lesson-highlight">5.85 مليار دولار</div>
+                                        <p class="text-sm text-gray-500">قيمة TAWAL المكتشفة</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Lesson 4 -->
+                            <div class="animate-fade-in animate-delay-4">
+                                <div class="lesson-card card-4">
+                                    <div class="lesson-badge">الدرس الرابع</div>
+                                    <div class="lesson-icon">
+                                        <i class="fas fa-search-dollar"></i>
+                                    </div>
+                                    <h3 class="lesson-title">عائد توزيعات أرباح أعلى من 8% يستدعي التدقيق</h3>
+
+                                    <ul class="mb-4">
+                                        <li class="flex items-center mb-2">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #ef4444;">
+                                            </div>
+                                            <p class="text-gray-700">عائد 9.08% جذاب لكن استدامته هي المفتاح</p>
+                                        </li>
+                                        <li class="flex items-center mb-2">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #ef4444;">
+                                            </div>
+                                            <p class="text-gray-700">التوزيعات الخاصة قد لا تكون متكررة</p>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <div class="w-3 h-3 rounded-full ml-2" style="background-color: #ef4444;">
+                                            </div>
+                                            <p class="text-gray-700">التركيز على أساسيات العمل وليس فقط على العائد</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="text-center mt-auto">
+                                        <div class="lesson-highlight">9.08%</div>
+                                        <p class="text-sm text-gray-500">عائد توزيعات الأرباح الحالي</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end slide ten -->
+            </div>
+
+            <!-- 11 -->
+            <div class="swiper-slide">
+                <!-- slide eleven -->
+                <div class="slide slide-eleven">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content">
+                        <h1 class="text-4xl font-bold mb-6 stc-blue text-center animate-fade-in">
+                            <i class="fas fa-hourglass-half ml-2"></i>
+                            السيناريوهات المستقبلية
+                        </h1>
+
+                        <div class="text-lg text-gray-600 mb-8 text-center animate-fade-in animate-delay-1">
+                            تطور شركة الاتصالات السعودية على المدى القصير والمتوسط والبعيد
+                        </div>
+
+                        <div class="timeline relative">
+                            <!-- Timeline period markers -->
+                            <div class="period-label period-1-label">2025-2026</div>
+                            <div class="period-label period-2-label">2027-2030</div>
+                            <div class="period-label period-3-label">ما بعد 2030</div>
+
+                            <!-- Period 1: 2025-2026 -->
+                            <div class="timeline-item timeline-right animate-fade-in animate-delay-1">
+                                <div class="timeline-marker period-1"></div>
+                                <div class="timeline-content">
+                                    <h3 class="text-xl font-bold mb-4 stc-blue">مرحلة التنفيذ</h3>
+
+                                    <!-- Base Scenario -->
+                                    <div class="scenario-card">
+                                        <div class="scenario-header">
+                                            <div class="scenario-icon base-scenario">
+                                                <i class="fas fa-balance-scale"></i>
+                                            </div>
+                                            <h4 class="text-lg font-bold">السيناريو الأساسي</h4>
+                                        </div>
+                                        <div class="flex items-center mb-1">
+                                            <div class="w-2 h-2 rounded-full ml-2 bg-blue-500"></div>
+                                            <p class="text-sm text-gray-700">نمو STC Bank وتقدم في التوسع الدولي</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Positive Scenario -->
+                                    <div class="scenario-card">
+                                        <div class="scenario-header">
+                                            <div class="scenario-icon positive-scenario">
+                                                <i class="fas fa-arrow-trend-up"></i>
+                                            </div>
+                                            <h4 class="text-lg font-bold">السيناريو الإيجابي</h4>
+                                        </div>
+                                        <div class="flex items-center mb-1">
+                                            <div class="w-2 h-2 rounded-full ml-2 bg-green-500"></div>
+                                            <p class="text-sm text-gray-700">عقود حكومية إضافية ونمو الخدمات الرقمية</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Negative Scenario -->
+                                    <div class="scenario-card">
+                                        <div class="scenario-header">
+                                            <div class="scenario-icon negative-scenario">
+                                                <i class="fas fa-arrow-trend-down"></i>
+                                            </div>
+                                            <h4 class="text-lg font-bold">السيناريو السلبي</h4>
+                                        </div>
+                                        <div class="flex items-center mb-1">
+                                            <div class="w-2 h-2 rounded-full ml-2 bg-red-500"></div>
+                                            <p class="text-sm text-gray-700">تأخيرات في التنفيذ وتخفيضات في التوزيعات
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Period 2: 2027-2030 -->
+                            <div class="timeline-item timeline-left animate-fade-in animate-delay-2">
+                                <div class="timeline-marker period-2"></div>
+                                <div class="timeline-content">
+                                    <h3 class="text-xl font-bold mb-4" style="color: #10B981;">نهاية رؤية 2030</h3>
+
+                                    <!-- Base Scenario -->
+                                    <div class="scenario-card">
+                                        <div class="scenario-header">
+                                            <div class="scenario-icon base-scenario">
+                                                <i class="fas fa-balance-scale"></i>
+                                            </div>
+                                            <h4 class="text-lg font-bold">السيناريو الأساسي</h4>
+                                        </div>
+                                        <div class="flex items-center mb-1">
+                                            <div class="w-2 h-2 rounded-full ml-2 bg-blue-500"></div>
+                                            <p class="text-sm text-gray-700">نظام بيئي رقمي راسخ ووجود دولي مستقر</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Positive Scenario -->
+                                    <div class="scenario-card">
+                                        <div class="scenario-header">
+                                            <div class="scenario-icon positive-scenario">
+                                                <i class="fas fa-arrow-trend-up"></i>
+                                            </div>
+                                            <h4 class="text-lg font-bold">السيناريو الإيجابي</h4>
+                                        </div>
+                                        <div class="flex items-center mb-1">
+                                            <div class="w-2 h-2 rounded-full ml-2 bg-green-500"></div>
+                                            <p class="text-sm text-gray-700">مركز رقمي إقليمي ومشغل دولي رئيسي</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Negative Scenario -->
+                                    <div class="scenario-card">
+                                        <div class="scenario-header">
+                                            <div class="scenario-icon negative-scenario">
+                                                <i class="fas fa-arrow-trend-down"></i>
+                                            </div>
+                                            <h4 class="text-lg font-bold">السيناريو السلبي</h4>
+                                        </div>
+                                        <div class="flex items-center mb-1">
+                                            <div class="w-2 h-2 rounded-full ml-2 bg-red-500"></div>
+                                            <p class="text-sm text-gray-700">فشل التحول والعودة للاتصالات الأساسية</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Period 3: Post-2030 -->
+                            <div class="timeline-item timeline-right animate-fade-in animate-delay-3">
+                                <div class="timeline-marker period-3"></div>
+                                <div class="timeline-content">
+                                    <h3 class="text-xl font-bold mb-4" style="color: #F59E0B;">شركة STC الجديدة</h3>
+
+                                    <!-- Base Scenario -->
+                                    <div class="scenario-card">
+                                        <div class="scenario-header">
+                                            <div class="scenario-icon base-scenario">
+                                                <i class="fas fa-balance-scale"></i>
+                                            </div>
+                                            <h4 class="text-lg font-bold">السيناريو الأساسي</h4>
+                                        </div>
+                                        <div class="flex items-center mb-1">
+                                            <div class="w-2 h-2 rounded-full ml-2 bg-blue-500"></div>
+                                            <p class="text-sm text-gray-700">مزود خدمات متكامل مع تنويع مصادر الدخل</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Positive Scenario -->
+                                    <div class="scenario-card">
+                                        <div class="scenario-header">
+                                            <div class="scenario-icon positive-scenario">
+                                                <i class="fas fa-arrow-trend-up"></i>
+                                            </div>
+                                            <h4 class="text-lg font-bold">السيناريو الإيجابي</h4>
+                                        </div>
+                                        <div class="flex items-center mb-1">
+                                            <div class="w-2 h-2 rounded-full ml-2 bg-green-500"></div>
+                                            <p class="text-sm text-gray-700">تكتل رقمي متحول بامتداد دولي واسع</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Negative Scenario -->
+                                    <div class="scenario-card">
+                                        <div class="scenario-header">
+                                            <div class="scenario-icon negative-scenario">
+                                                <i class="fas fa-arrow-trend-down"></i>
+                                            </div>
+                                            <h4 class="text-lg font-bold">السيناريو السلبي</h4>
+                                        </div>
+                                        <div class="flex items-center mb-1">
+                                            <div class="w-2 h-2 rounded-full ml-2 bg-red-500"></div>
+                                            <p class="text-sm text-gray-700">مشغل اتصالات مكلف مع توزيعات أرباح غير
+                                                مستدامة</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- end slide eleven -->
+            </div>
+            <!-- 12 -->
+            <div class="swiper-slide">
+                <!-- slide twelve -->
+                <div class="slide slide-twelve">
+                    <!-- Decorative background elements -->
+                    <div class="decorative-element decorative-1"></div>
+                    <div class="decorative-element decorative-2"></div>
+                    <div class="decorative-element decorative-3"></div>
+
+                    <!-- Vision 2030 badge -->
+                    <div class="vision-badge">
+                        <i class="fas fa-chart-line ml-1"></i> رؤية 2030
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="slide-content">
+                        <h1 class="text-4xl font-bold mb-6 stc-blue text-center animate-fade-in">
+                            <i class="fas fa-award ml-2"></i>
+                            الخلاصة النهائية
+                        </h1>
+
+                        <div class="grid grid-cols-3 gap-6 mb-6">
+                            <!-- Income Investors -->
+                            <div class="animate-fade-in animate-delay-1">
+                                <div class="investor-card income-card">
+                                    <div class="investor-icon">
+                                        <i class="fas fa-hand-holding-dollar"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3 text-blue-600">لمستثمري الدخل</h3>
+                                    <div class="pros-cons-item text-green-600">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>عائد توزيعات 9.08%</span>
+                                    </div>
+                                    <div class="pros-cons-item text-green-600">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>دعم حكومي يوفر استقرار</span>
+                                    </div>
+                                    <div class="pros-cons-item text-red-600">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <span>مخاوف استدامة التوزيعات</span>
+                                    </div>
+                                    <div class="mt-3 text-sm border-t pt-3">
+                                        <span class="font-bold text-blue-600">الخلاصة:</span> جذاب مع متابعة نسبة
+                                        التوزيعات
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Growth Investors -->
+                            <div class="animate-fade-in animate-delay-2">
+                                <div class="investor-card growth-card">
+                                    <div class="investor-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3 text-green-600">لمستثمري النمو</h3>
+                                    <div class="pros-cons-item text-green-600">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>استراتيجية التحول الرقمي</span>
+                                    </div>
+                                    <div class="pros-cons-item text-green-600">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>دعم رؤية 2030</span>
+                                    </div>
+                                    <div class="pros-cons-item text-red-600">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <span>مخاطر التنفيذ</span>
+                                    </div>
+                                    <div class="mt-3 text-sm border-t pt-3">
+                                        <span class="font-bold text-green-600">الخلاصة:</span> جذاب إذا نجح التحول
+                                        الرقمي
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Value Investors -->
+                            <div class="animate-fade-in animate-delay-3">
+                                <div class="investor-card value-card">
+                                    <div class="investor-icon">
+                                        <i class="fas fa-scale-balanced"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-3 text-yellow-600">لمستثمري القيمة</h3>
+                                    <div class="pros-cons-item text-green-600">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>نسبة P/E معقولة (18.93)</span>
+                                    </div>
+                                    <div class="pros-cons-item text-green-600">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>شركة غنية بالأصول</span>
+                                    </div>
+                                    <div class="pros-cons-item text-red-600">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <span>اعتماد على العقود الحكومية</span>
+                                    </div>
+                                    <div class="mt-3 text-sm border-t pt-3">
+                                        <span class="font-bold text-yellow-600">الخلاصة:</span> قيمة عادلة عند المستويات
+                                        الحالية
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Final Recommendation -->
+                        <div class="recommendation-card animate-fade-in animate-delay-4">
+                            <div class="recommendation-badge">توصية</div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <h2 class="text-2xl font-bold mb-4">التوصية الاستثمارية</h2>
+
+                                    <div class="flex flex-wrap">
+                                        <div class="recommendation-stat">
+                                            <i class="fas fa-tag"></i>
+                                            <span>احتفاظ مع شراء عند الانخفاض دون 40 ريال</span>
+                                        </div>
+
+                                        <div class="recommendation-stat">
+                                            <i class="fas fa-bullseye"></i>
+                                            <span>السعر المستهدف: 47 ريال (12 شهر)</span>
+                                        </div>
+
+                                        <div class="recommendation-stat">
+                                            <i class="fas fa-triangle-exclamation"></i>
+                                            <span>مستوى المخاطر: متوسط-مرتفع</span>
+                                        </div>
+
+                                        <div class="recommendation-stat animate-pulse">
+                                            <i class="fas fa-eye"></i>
+                                            <span>استدامة التوزيعات: مراقبة عن كثب</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="final-verdict mt-4">
+                                        <i class="fas fa-quote-right verdict-quote"></i>
+                                        <span class="verdict-badge">الحكم النهائي</span>
+                                        <p class="text-lg font-bold mb-2">
+                                            STC ليست مجرد سهم اتصالات - إنها رهان على التحول الرقمي للسعودية
+                                        </p>
+                                        <p class="text-sm opacity-80">
+                                            أحيانًا تكون أفضل الاستثمارات هي التي تبدو مملة على السطح، ولكنها في الواقع
+                                            تبني البنية
+                                            التحتية للمستقبل الرقمي لأمة بأكملها.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-center">
+                                    <div class="flex flex-col items-center">
+                                        <div class="circle-progress mb-14">
+                                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                                <circle class="circle-bg" cx="60" cy="60" r="54" />
+                                                <circle class="circle-progress-value" cx="60" cy="60" r="54"
+                                                    style="stroke: #10b981; stroke-dasharray: 254.47, 339.29;" />
+                                            </svg>
+                                            <div class="circle-text">75%</div>
+                                        </div>
+                                        <div class="text-center mb-2">
+                                            <h3 class="text-xl font-bold">نسبة النجاح</h3>
+                                            <p class="text-sm opacity-70">فرصة تحقيق سعر الهدف</p>
+                                        </div>
+
+                                        <div class="mt-4 flex items-center justify-center">
+                                            <div class="h-4 w-56 bg-gray-200 rounded-full overflow-hidden">
+                                                <div class="h-full bg-gradient-to-r from-red-500 via-yellow-500 to-green-500"
+                                                    style="width: 75%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-between w-56 text-xs mt-1">
+                                            <span>مخاطرة عالية</span>
+                                            <span>متوازن</span>
+                                            <span>آمن</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STC Logo -->
+                    <div class="logo-container">
+                        <div class="stc-bg-blue rounded-full p-4">
+                            <span class="text-white font-bold text-3xl">STC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end slide twelve -->
+            </div>
+
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+
+
+
+    <!-- all script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: 'horizontal',
+            effect: "slide", //slide,fade,cube,coverflow,flip,cards,creative
+            grabCursor: false,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            autoHeight: true,
+            pagination: false,
+
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            creativeEffect: {
+                prev: {
+                    translate: [0, 0, -400],
+                    opacity: 0.5,
+                    rotate: [0, 100, 0],
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                    opacity: 0.8,
+                    rotate: [0, -30, 0],
+                },
+            },
+
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            // pagination: {
+
+            //     el: ".swiper-pagination",
+            //     clickable: true,
+            //     type: "bullets"
+            // },
+        });
+    </script>
+    <!-- chart slide two -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('performanceChart').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['STC', 'تاسي'],
+                    datasets: [
+                        {
+                            label: 'أداء 2024',
+                            backgroundColor: ['#4d5b72', '#888888'],
+                            data: [13.01, 0.6],
+                            borderWidth: 0,
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'عائد التوزيعات',
+                            backgroundColor: ['#4d94db', '#cccccc'],
+                            data: [9.08, 3.5],
+                            borderWidth: 0,
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    family: 'Tajawal',
+                                    size: 14
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function (value) {
+                                    return value + '%';
+                                },
+                                font: {
+                                    family: 'Tajawal'
+                                }
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                font: {
+                                    family: 'Tajawal',
+                                    size: 14,
+                                    weight: 'bold'
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- chart slide three -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('financialChart').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['صافي الربح', 'الإيرادات', 'التوزيعات'],
+                    datasets: [
+                        {
+                            label: '2023 (مليار ريال)',
+                            backgroundColor: '#888888',
+                            data: [12.5, 71.7, 4],
+                            borderWidth: 0,
+                            borderRadius: 4
+                        },
+                        {
+                            label: '2024 (مليار ريال)',
+                            backgroundColor: '#4d5b72',
+                            data: [25, 76, 13],
+                            borderWidth: 0,
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    family: 'Tajawal',
+                                    size: 14
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                font: {
+                                    family: 'Tajawal'
+                                }
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                font: {
+                                    family: 'Tajawal',
+                                    size: 14,
+                                    weight: 'bold'
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- slide six -->
+
+    <script>
+        // Chart configuration
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('valuationChart').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['السعر الحالي', 'سيناريو متشائم', 'سيناريو أساسي', 'سيناريو متفائل'],
+                    datasets: [{
+                        data: [42.95, 37.5, 46.5, 52.5],
+                        backgroundColor: [
+                            '#4d5b72', // Current price - STC blue
+                            '#ef444488', // Bear case - Red with transparency
+                            '#3b82f688', // Base case - Blue with transparency
+                            '#22c55e88'  // Bull case - Green with transparency
+                        ],
+                        borderColor: [
+                            '#4d5b72',
+                            '#ef4444',
+                            '#3b82f6',
+                            '#22c55e'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            rtl: true,
+                            titleFont: {
+                                family: 'Tajawal'
+                            },
+                            bodyFont: {
+                                family: 'Tajawal'
+                            },
+                            callbacks: {
+                                label: function (context) {
+                                    return context.raw + ' ريال';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 30,
+                            max: 60,
+                            grid: {
+                                display: true,
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            },
+                            ticks: {
+                                font: {
+                                    family: 'Tajawal'
+                                },
+                                callback: function (value) {
+                                    return value + ' ريال';
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                font: {
+                                    family: 'Tajawal',
+                                    weight: 'bold'
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
